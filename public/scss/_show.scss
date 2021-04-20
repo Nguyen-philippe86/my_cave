@@ -1,0 +1,44 @@
+.containerShowBottles{
+        height: 100vh;
+        background-image: url(../img/background.jpeg);
+        background-size: cover;
+        .containerShowCard{
+            display: flex;
+            justify-content: center;
+            margin: 50px 5%;
+            .ShowCard{
+                width: 850px;
+                margin-left: 15px;
+                margin-top: 15px;
+                padding: 20px;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                border: 3px solid $link-hover;
+                box-shadow: 4px 4px 10px grey;
+                font-family: police;
+                img{
+                    width: 50%;
+                    border: 1px solid black;
+                    box-shadow: 1px 1px 25px black;
+                }
+                .cardShowTitle{
+                    text-align: center;
+                    font-size: 50px;
+                    font-family: police-bold;
+                    color: $link-hover;
+                    padding: 50px 0 50px 0px;
+                }
+                ul{
+                    list-style: none;
+                    font-family: police-semi-bold;
+                    margin-bottom: 50px;
+                    margin-left: 50px;
+                    padding-right: 40px;
+                    li{
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }

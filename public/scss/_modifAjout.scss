@@ -1,0 +1,52 @@
+.containerForm{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background.jpeg);
+    background-size: cover;
+    font-family: 'police';
+    .form{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:100px;
+        padding: 50px;
+        border: 2px solid #3E0018;
+        background-color: white;
+        box-shadow: 1px 1px 25px black;
+        font-size: 30px;
+        line-height: 50px;
+        .modifAjout{
+            line-height: 30px;
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 30px;
+            margin-left: 50%;
+            background-color: $link-hover;
+            border-radius: 25px;
+            color: white;
+            box-shadow: 1px 1px 25px grey;
+        }
+        #bottle_year{
+            margin-left: 175px;
+            padding: 0px 30px;
+        }
+        #bottle_grapes{
+            margin-left: 140px;
+            padding: 0px 30px;
+        }
+        #bottle_description{
+            margin-left: 83px;
+            padding: 0px 30px;
+        }
+        #bottle_pictureFile{
+            margin-left: 63px;
+            padding: 0px 30px;
+        }
+        #bottle_domaine{
+            margin-left: 114px;
+            padding: 0px 30px;
+        }
+        
+    }
+}

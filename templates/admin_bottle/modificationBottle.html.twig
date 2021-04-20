@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+
+<div class="containerForm">
+
+    <h1 class="titre">{% block titre %}
+        {% if isModification %}
+            Modification de {{bottle.domaine.name}}
+        {% else %}
+            Ajouter une bouteille
+        {% endif %}
+    {% endblock %}</h1>
+
+    <div class="form">
+        {{form_start(form)}}
+            {{form_widget(form)}}
+            <button type="submit" class="modifAjout">Valider</button>
+        {{form_end(form)}}
+    </div>
+</div>
+
+{% endblock %}

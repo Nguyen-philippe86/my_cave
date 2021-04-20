@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="containerShowBottles">
+
+    <h1 class="titre">{% block titre %}Description{% endblock %}</h1>
+    <div class="containerShowCard">
+        <div class="ShowCard">
+            <img src="{{ asset('img/' ~ bottle.picture )}}" class="cardShowPictures">
+            <ul>
+                <h3 class="cardShowTitle">{{ bottle.domaine.name }}</h3>
+                <li>Year : {{ bottle.year }}</li>
+                <li>Grapes : {{ bottle.grapes }}</li>
+                <li>Country : {{ bottle.domaine.country }}</li>
+                <li>Region : {{ bottle.domaine.region }}</li>
+                <br>
+                <li>{{ bottle.description }}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+.containerFormDomaine{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/background.jpeg);
+    background-size: cover;
+    font-family: 'police';
+    .formDomaine{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:100px;
+        padding: 50px;
+        border: 2px solid #3E0018;
+        background-color: white;
+        box-shadow: 1px 1px 25px black;
+        font-size: 30px;
+        line-height: 50px;
+        .ajoutDomaine{
+            line-height: 30px;
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 30px;
+            margin-left: 50%;
+            background-color: $link-hover;
+            border-radius: 25px;
+            color: white;
+            box-shadow: 1px 1px 25px grey;
+        }
+        #domaine_name{
+            margin-left: 167px;
+            padding: 0px 30px;
+        }
+        #domaine_country{
+            margin-left: 140px;
+            padding: 0px 30px;
+        }
+        #domaine_region{
+            margin-left: 154px;
+            padding: 0px 30px;
+        }
+    }
+}

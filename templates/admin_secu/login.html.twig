@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+        {% if error %}
+            <div class="">Les informations sont incorrectes</div>
+        {% endif %}
+
+    <div class="containerFormLogin">
+
+        <h1 class="titre">{% block titre %}Se connecter{% endblock %}</h1>
+
+        <div class="formLogin">
+            <form action="{{ path('connexion') }}" method="POST">
+                <div class="loginUsername">
+                    <label>Nom d'utilisateur :</label>
+                    <input type="text" require name="_username" class="placeholderLogin">
+                    <label>Mot de passe :</label>
+                    <input type="password" require name="_password" class="placeholderLogin">
+                </div>
+                <button type="submit" class="login">Se connecter</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

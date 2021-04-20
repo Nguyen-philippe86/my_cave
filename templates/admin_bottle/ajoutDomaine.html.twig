@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<div class="containerFormDomaine">
+
+    <h1 class="titre">{% block titre %}Ajouter un domaine{% endblock %}</h1>
+
+    <div class="formDomaine">
+        {{form_start(form2)}}
+            {{form_widget(form2)}}
+            <button type="submit" class="ajoutDomaine">Valider</button>
+        {{form_end(form2)}}
+    </div>
+</div>
+{% endblock %}

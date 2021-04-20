@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administrateur{% endblock %}
+
+{% block body %}
+
+<div class="containerAdmin">
+
+    <h1 class="titre">{% block titre %}Visuel admin{% endblock %}</h1>
+    <div class="containerCreation">
+        <a class="creation" href="{{path('admin_bottle_creation')}}"><i class="fas fa-plus"></i> <i class="fas fa-wine-bottle"></i></i></a>
+        <a class="ajoutDomaine" href="{{path('admin_ajout_domaine')}}"><i class="fas fa-plus"></i> <i class="fas fa-chess-rook"></i></i></a>
+    </div>
+
+    <div class="containerCardAdmin">
+        {% for bottles in bottle %} 
+        <div class="cardAdmin">
+            <img src="{{ asset('img/' ~ bottles.picture )}}" class="cardPictures">
+            <h3 class="cardTitleAdmin">{{ bottles.domaine.name }}</h3>
+            <ul>
+                <li>Year : {{ bottles.year }}</li>
+                <li>Grapes : {{ bottles.grapes }}</li>
+                <li>Country : {{ bottles.domaine.country }}</li>
+                <li>Region : {{ bottles.domaine.region }}</li>
+            </ul>
+            <ul>
+                <li>Description : {{ bottles.description }}</li>
+            </ul>
+            <div class="actionAdmin">
+                <a href="{{path('admin_bottle_modification',{'id' : bottles.id})}}"><i class="fas fa-pen"></i></a>
+                <form method="POST" action="{{path('admin_bottle_suppression',{'id' : bottles.id})}}" class="deleteAdmin">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ bottles.id)}}">
+                    <input type="submit" value="Supprimer">
+                </form>
+            </div>
+        </div>
+        {% endfor %} 
+    </div>
+    
+</div>
+{% endblock %}

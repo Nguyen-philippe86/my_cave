@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div class="containerBottles">
+
+    <h1 class="titre">{% block titre %}Liste des vins{% endblock %}</h1>
+    <div class="containerCard">
+        {% for bottles in bottle %} 
+        <div class="card">
+            <img src="{{ asset('img/' ~ bottles.picture )}}" class="cardPictures">
+            <h3 class="cardTitle">{{ bottles.domaine.name }}</h3>
+            <ul>
+                <li>Year : {{ bottles.year }}</li>
+                <li>Grapes : {{ bottles.grapes }}</li>
+                <li>Country : {{ bottles.domaine.country }}</li>
+                <li>Region : {{ bottles.domaine.region }}</li>
+            </ul>
+            <ul class="description">
+                <li>Description : {{ bottles.description|u.truncate(54) }} <a href="{{ path('show_bottles', {'id':bottles.id}) }}">Lire la suite</a></li>
+            </ul>
+        </div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,68 @@
+.containerBottles{
+    height: auto;
+    background-image: url(../img/background.jpeg);
+    background-size: cover;
+    font-family: police;
+    padding-bottom: 75px;
+    .containerCard{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 15px 5%;
+        .card{
+            width: 250px;
+            margin-left: 15px;
+            margin-top: 15px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border: 3px solid $link-hover;
+            box-shadow: 1px 1px 25px black;
+            font-family: police;
+            position: relative;
+            img{
+                width: 100%;
+                border: 1px solid black;
+                box-shadow: 1px 1px 25px black;
+
+            }
+            .cardTitle{
+                text-align: center;
+                font-size: 20px;
+                font-family: police-bold;
+                color: $link-hover;
+                padding: 50px 0 25px 0px;
+            }
+            ul{
+                list-style: none;
+                font-family: police-semi-bold;
+                margin-bottom: 50px;
+                li{
+                    line-height: 25px;
+                }
+            }
+            a{
+                margin: 0px;
+                margin-top: 20px;
+                background-color: #3E0018;
+                padding: 21px 23px;
+                border-radius: 35px;
+                color: white;
+                font-size: 20px;
+                box-shadow: 4px 4px 20px grey;
+                font-family: police-semi-bold;
+                text-decoration: none;
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .titreIndex{
+        font-size: 5vh;
+        color: $link-hover;
+        font-family: police-bold;
+        padding: 30px 0px 0px 100px;
+    }
+}

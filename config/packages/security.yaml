@@ -1,16 +1,29 @@
 security:
+    encoders: # active l'encodeur pour mdp
+        App\Entity\User:
+            algorithm: auto # défini une algorythme automatique
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users_in_memory: { memory: null }
+        in_database: 
+            entity:
+                class: App\Entity\User # Va chercher un user dans Entity de la class User
+                property: username # Lien de comparaison par la propriété username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
-            lazy: true
-            provider: users_in_memory
 
+            provider: in_database # = firewall, autorisation a passer la securité
+            form_login:
+                login_path: connexion #lien du formulaire
+                check_path: connexion
+            logout: 
+                path: deconnexion #deconnexion
+                target: bottles # redirection vers la page aliment
+            lazy: true
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 

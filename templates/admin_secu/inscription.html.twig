@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="containerformInscription">
+
+    <h1 class="titre">{% block titre %}Inscription{% endblock %}</h1>
+    
+    <div class="formInscription">
+        {{ form_start(form) }}
+            <div class="incriptionUsername">
+                {{ form_row(form.username,{"attr":{"placeholder":"Login"},"label":"Votre nom d'utilisateur"}) }}
+                {{ form_row(form.password,{"attr":{"placeholder":"password"},"label":"Entrer votre mot de passe"}) }}
+                {{ form_row(form.verificationPassword,{"attr":{"placeholder":"password"},"label":"Confirmer votre mot de passe"}) }}
+                {{ form_widget(form) }}
+                <button type="submit" class="submitInscription">S'inscrire</button>
+            </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}
+

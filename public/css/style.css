@@ -1,0 +1,511 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "police";
+  src: url("../police/SourceSansPro-Regular.ttf");
+}
+@font-face {
+  font-family: "police-bold";
+  src: url("../police/SourceSansPro-Bold.ttf");
+}
+@font-face {
+  font-family: "police-semi-bold";
+  src: url("../police/SourceSansPro-SemiBold.ttf");
+}
+.menuContainer {
+  width: 100%;
+  height: 90px;
+  background-color: #3E0018;
+  display: flex;
+  align-items: center;
+}
+.menuContainer img {
+  width: 175px;
+  height: 40px;
+  padding-left: 50px;
+}
+
+.menuListe {
+  width: 100%;
+  line-height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.menuItem {
+  list-style-type: none;
+  display: inline;
+  font-size: 20px;
+  font-family: "police";
+  padding-right: 30px;
+}
+.menuItem a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+.menuItem a:hover {
+  color: #885C7E;
+  font-family: "police-bold";
+}
+
+.titre {
+  font-size: 5vh;
+  color: #3E0018;
+  font-family: police-bold;
+  padding: 50px 0px 50px 55px;
+}
+
+.containerBottles {
+  height: auto;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  font-family: police;
+  padding-bottom: 75px;
+}
+.containerBottles .containerCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px 5%;
+}
+.containerBottles .containerCard .card {
+  width: 250px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: white;
+  border: 3px solid #3E0018;
+  box-shadow: 1px 1px 25px black;
+  font-family: police;
+  position: relative;
+}
+.containerBottles .containerCard .card img {
+  width: 100%;
+  border: 1px solid black;
+  box-shadow: 1px 1px 25px black;
+}
+.containerBottles .containerCard .card .cardTitle {
+  text-align: center;
+  font-size: 20px;
+  font-family: police-bold;
+  color: #3E0018;
+  padding: 50px 0 25px 0px;
+}
+.containerBottles .containerCard .card ul {
+  list-style: none;
+  font-family: police-semi-bold;
+  margin-bottom: 50px;
+}
+.containerBottles .containerCard .card ul li {
+  line-height: 25px;
+}
+.containerBottles .containerCard .card a {
+  margin: 0px;
+  margin-top: 20px;
+  background-color: #3E0018;
+  padding: 21px 23px;
+  border-radius: 35px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 4px 4px 20px grey;
+  font-family: police-semi-bold;
+  text-decoration: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.containerBottles .titreIndex {
+  font-size: 5vh;
+  color: #3E0018;
+  font-family: police-bold;
+  padding: 30px 0px 0px 100px;
+}
+
+.containerAdmin {
+  height: 100%;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  font-family: police;
+  padding-bottom: 75px;
+}
+.containerAdmin .containerCreation {
+  width: 90%;
+  padding: 20px 0;
+  margin: 15px 5%;
+}
+.containerAdmin .containerCreation .creation {
+  background-color: #3E0018;
+  padding: 10px 75px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 25px black;
+  font-size: 2rem;
+  color: white;
+  border-radius: 45px;
+  text-decoration: none;
+  word-spacing: 10px;
+  margin-right: 20px;
+}
+.containerAdmin .containerCreation .ajoutDomaine {
+  background-color: #3E0018;
+  padding: 10px 75px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 25px black;
+  font-size: 2rem;
+  color: white;
+  border-radius: 45px;
+  text-decoration: none;
+  word-spacing: 10px;
+}
+.containerAdmin .containerCardAdmin {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px 5%;
+}
+.containerAdmin .containerCardAdmin .cardAdmin {
+  width: 380px;
+  height: 75vh;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: white;
+  border: 3px solid #3E0018;
+  box-shadow: 1px 1px 25px black;
+  font-family: police;
+  position: relative;
+}
+.containerAdmin .containerCardAdmin .cardAdmin .cardPictures {
+  width: 30%;
+  margin-left: 130px;
+}
+.containerAdmin .containerCardAdmin .cardAdmin .cardTitleAdmin {
+  text-align: center;
+  font-size: 20px;
+  font-family: police-bold;
+  color: #3E0018;
+  padding: 25px 0px;
+}
+.containerAdmin .containerCardAdmin .cardAdmin ul {
+  text-align: center;
+  list-style: none;
+  font-family: police-semi-bold;
+  margin-bottom: 25px;
+}
+.containerAdmin .containerCardAdmin .cardAdmin ul li {
+  line-height: 25px;
+}
+.containerAdmin .containerCardAdmin .cardAdmin a {
+  margin: 7px;
+  background-color: #3E0018;
+  padding: 5px 30px;
+  border-radius: 35px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 4px 4px 20px grey;
+  font-family: police-semi-bold;
+}
+.containerAdmin .containerCardAdmin .cardAdmin .actionAdmin {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.containerAdmin .containerCardAdmin .cardAdmin .actionAdmin .deleteAdmin {
+  margin: 7px;
+  background-color: #3E0018;
+  padding: 5px 30px;
+  border-radius: 35px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 4px 4px 20px grey;
+  font-family: police-semi-bold;
+}
+.containerAdmin .titreIndex {
+  font-size: 5vh;
+  color: #3E0018;
+  font-family: police-bold;
+  padding: 30px 0px 0px 100px;
+}
+
+.containerShowBottles {
+  height: 100vh;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+}
+.containerShowBottles .containerShowCard {
+  display: flex;
+  justify-content: center;
+  margin: 50px 5%;
+}
+.containerShowBottles .containerShowCard .ShowCard {
+  width: 850px;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: 3px solid #3E0018;
+  box-shadow: 4px 4px 10px grey;
+  font-family: police;
+}
+.containerShowBottles .containerShowCard .ShowCard img {
+  width: 50%;
+  border: 1px solid black;
+  box-shadow: 1px 1px 25px black;
+}
+.containerShowBottles .containerShowCard .ShowCard .cardShowTitle {
+  text-align: center;
+  font-size: 50px;
+  font-family: police-bold;
+  color: #3E0018;
+  padding: 50px 0 50px 0px;
+}
+.containerShowBottles .containerShowCard .ShowCard ul {
+  list-style: none;
+  font-family: police-semi-bold;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding-right: 40px;
+}
+.containerShowBottles .containerShowCard .ShowCard ul li {
+  line-height: 25px;
+}
+
+.containerformInscription {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  font-family: "police";
+}
+.containerformInscription .formInscription {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding: 50px;
+  border: 2px solid #3E0018;
+  background-color: white;
+  box-shadow: 1px 1px 25px black;
+}
+.containerformInscription .formInscription .incriptionUsername {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.containerformInscription .formInscription .incriptionUsername #inscription_username {
+  margin-left: 147px;
+  padding: 0px 30px;
+}
+.containerformInscription .formInscription .incriptionUsername #inscription_password {
+  margin-left: 119px;
+  padding: 0px 30px;
+}
+.containerformInscription .formInscription .incriptionUsername #inscription_verificationPassword {
+  margin-left: 79px;
+  padding: 0px 30px;
+}
+.containerformInscription .formInscription .submitInscription {
+  line-height: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  background-color: #3E0018;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 1px 1px 25px grey;
+}
+
+.containerForm {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  font-family: "police";
+}
+.containerForm .form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding: 50px;
+  border: 2px solid #3E0018;
+  background-color: white;
+  box-shadow: 1px 1px 25px black;
+  font-size: 30px;
+  line-height: 50px;
+}
+.containerForm .form .modifAjout {
+  line-height: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 50%;
+  background-color: #3E0018;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 1px 1px 25px grey;
+}
+.containerForm .form #bottle_year {
+  margin-left: 175px;
+  padding: 0px 30px;
+}
+.containerForm .form #bottle_grapes {
+  margin-left: 140px;
+  padding: 0px 30px;
+}
+.containerForm .form #bottle_description {
+  margin-left: 83px;
+  padding: 0px 30px;
+}
+.containerForm .form #bottle_pictureFile {
+  margin-left: 63px;
+  padding: 0px 30px;
+}
+.containerForm .form #bottle_domaine {
+  margin-left: 114px;
+  padding: 0px 30px;
+}
+
+.containerFormDomaine {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  font-family: "police";
+}
+.containerFormDomaine .formDomaine {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding: 50px;
+  border: 2px solid #3E0018;
+  background-color: white;
+  box-shadow: 1px 1px 25px black;
+  font-size: 30px;
+  line-height: 50px;
+}
+.containerFormDomaine .formDomaine .ajoutDomaine {
+  line-height: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 50%;
+  background-color: #3E0018;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 1px 1px 25px grey;
+}
+.containerFormDomaine .formDomaine #domaine_name {
+  margin-left: 167px;
+  padding: 0px 30px;
+}
+.containerFormDomaine .formDomaine #domaine_country {
+  margin-left: 140px;
+  padding: 0px 30px;
+}
+.containerFormDomaine .formDomaine #domaine_region {
+  margin-left: 154px;
+  padding: 0px 30px;
+}
+
+.containerFormLogin {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  font-family: "police";
+}
+.containerFormLogin .formLogin {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding: 50px;
+  border: 2px solid #3E0018;
+  background-color: white;
+  box-shadow: 1px 1px 25px black;
+  display: flex;
+  justify-content: center;
+}
+.containerFormLogin .formLogin .loginUsername {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 30px;
+}
+.containerFormLogin .formLogin .login {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #3E0018;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 1px 1px 25px grey;
+}
+
+/*# sourceMappingURL=style.css.map */

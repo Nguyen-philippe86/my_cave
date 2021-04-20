@@ -1,0 +1,17 @@
+<header>
+    <nav class="menuContainer">
+        <a href="{{ path ('bottles') }}"><img src="{{ asset('img/logo.png') }}"></a>
+
+        <ul class="menuListe">
+            <li class="menuItem"><a href="{{ path ('bottles') }}">Cave</a></li>
+    {% if not app.user %} <!--Si aucun USER détecter, affiche le lien inscription et connexion-->
+            <li class="menuItem"><a href="{{ path ('inscription') }}">Inscription</a></li>
+            <li class="menuItem"><a href="{{ path ('connexion') }}">Connexion</a></li>
+    {% else %} <!--Sinon affiche le lien admin et deconnexion-->
+            <li class="menuItem"><a href="{{ path ('admin_bottle') }}">Admin</a></li>
+            <li class="menuItem"><a href="{{ path ('deconnexion') }}">Deconnexion</a></li>
+    {% endif %}
+        </ul>
+
+    </nav>
+</header>   
